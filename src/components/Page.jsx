@@ -1,5 +1,5 @@
-import Header from "./Header";
-import WeatherBoard from "./WeatherBoard";
+import Header from "./Header/Header";
+import WeatherBoard from "./Weather/WeatherBoard";
 
 const Page = () => {
   return (

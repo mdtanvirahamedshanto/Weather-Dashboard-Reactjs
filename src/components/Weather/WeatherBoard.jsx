@@ -1,6 +1,13 @@
-import AddFvtButton from "./AddFvtButton";
+/* eslint-disable no-unused-vars */
+
+import useWeather from "../../hooks/useWeather";
+import AddFvtButton from "../Header/AddFvtButton";
+import WeatherCondition from "./WeatherCondition";
+import WeatherHeadline from "./WeatherHeadline";
 
 const WeatherBoard = () => {
+  const { weatherData, loading, isError } = useWeather();
+  console.log(weatherData);
   return (
     <main>
       <section className="">
@@ -17,7 +24,7 @@ const WeatherBoard = () => {
                 </div>
               </div> */}
               <AddFvtButton />
-              <div>
+              {/* <div>
                 <div className="max-md:flex items-center justify-between md:-mt-10">
                   <img src="./assets/cloud.svg" alt="cloud" />
                   <div className="max-md:flex items-center max-md:space-x-4">
@@ -31,8 +38,10 @@ const WeatherBoard = () => {
                   </div>
                 </div>
                 <p className="text-sm lg:text-lg">06:09 - Sunday, 9 Dec ‘23</p>
-              </div>
-              <div>
+              </div> */}
+
+              <WeatherHeadline />
+              {/* <div>
                 <p className="text-sm lg:text-lg font-bold uppercase mb-8">
                   thunderstorm with light drizzle
                 </p>
@@ -73,7 +82,9 @@ const WeatherBoard = () => {
                     </div>
                   </li>
                 </ul>
-              </div>
+              </div> */}
+
+              <WeatherCondition />
             </div>
           </div>
         </div>
