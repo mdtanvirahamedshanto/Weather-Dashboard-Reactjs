@@ -1,3 +1,5 @@
+import AddFvtButton from "./AddFvtButton";
+
 const WeatherBoard = () => {
   return (
     <main>
@@ -5,14 +7,16 @@ const WeatherBoard = () => {
         <div className="container">
           <div className="grid bg-black/20 rounded-xl backdrop-blur-md border-2 lg:border-[3px] border-white/[14%] px-4 lg:px-14 py-6 lg:py-10 min-h-[520px] max-w-[1058px] mx-auto">
             <div className="grid md:grid-cols-2 gap-10 md:gap-6">
-              <div className="md:col-span-2">
+              {/* Add fvt  */}
+              {/* <div className="md:col-span-2">
                 <div className="flex items-center justify-end space-x-6">
                   <button className="text-sm md:text-base inline-flex items-center space-x-2 px-3 py-1.5 rounded-md bg-[#C5C5C54D]">
                     <span>Add to Favourite</span>
                     <img src="./assets/heart.svg" alt="" />
                   </button>
                 </div>
-              </div>
+              </div> */}
+              <AddFvtButton />
               <div>
                 <div className="max-md:flex items-center justify-between md:-mt-10">
                   <img src="./assets/cloud.svg" alt="cloud" />
