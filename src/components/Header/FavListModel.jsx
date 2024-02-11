@@ -17,7 +17,7 @@ const FavListModel = () => {
             </li>
           ))
         ) : (
-          <span>Not Found...</span>
+          <span>Nothing Added Favourite</span>
         )}
         {/* <li className="hover:bg-gray-200">Dhaka</li>
         <li className="hover:bg-gray-200">Rangpur</li>
