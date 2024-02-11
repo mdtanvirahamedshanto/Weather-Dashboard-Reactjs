@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 
-import { WeatherContext } from "../contexts/WeatherContext";
+import { WeatherContext } from "../contexts";
 import useWeather from "../hooks/useWeather";
 
 const WeatherProvider = ({ children }) => {

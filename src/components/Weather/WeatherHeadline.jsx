@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { WeatherContext } from "../../contexts/WeatherContext";
+import { WeatherContext } from "../../contexts";
 import getDate from "../../utils/date";
 
 import CloudIcon from "/assets/cloud.svg";
