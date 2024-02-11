@@ -1,13 +1,16 @@
 import "./App.css";
 import Page from "./components/Page";
-import WeatherProvider from "./provider/WeatherProvider";
+import { FavouriteProvider, WeatherProvider } from "./provider";
+// import WeatherProvider from "./provider/WeatherProvider";
 
 export default function App() {
   return (
     <WeatherProvider>
-      <div className="dark">
-        <Page />
-      </div>
+      <FavouriteProvider>
+        <div className="dark">
+          <Page />
+        </div>
+      </FavouriteProvider>
     </WeatherProvider>
   );
 }

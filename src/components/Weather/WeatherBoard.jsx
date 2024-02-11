@@ -2,7 +2,7 @@
 
 import { useContext } from "react";
 
-import { WeatherContext } from "../../contexts/WeatherContext";
+import { WeatherContext } from "../../contexts";
 import AddFvtButton from "../Header/AddFvtButton";
 import WeatherCondition from "./WeatherCondition";
 import WeatherHeadline from "./WeatherHeadline";

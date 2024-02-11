@@ -1,8 +1,11 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import { FavouriteContext } from "../contexts/FavouriteContext";
-import useLocalStorage from "../hooks/useLocalStorage";
+// import { FavouriteContext } from "../contexts/FavouriteContext";
+import { FavouriteContext } from "../contexts";
+import { useLocalStorage } from "../hooks";
+// import useLocalStorage from "../hooks/useLocalStorage";
 
-const FavouriteProvider = (children) => {
+const FavouriteProvider = ({ children }) => {
   const [favourite, setFavourite] = useLocalStorage("favourites", []);
   const addFavourite = (latitude, longitude, location) => {
     setFavourite(...favourite, {
@@ -18,9 +21,13 @@ const FavouriteProvider = (children) => {
     setFavourite(restFvt);
   };
 
-  <FavouriteContext.Provider value={(favourite, addFavourite, removeFavourite)}>
-    {children}
-  </FavouriteContext.Provider>;
+  return (
+    <FavouriteContext.Provider
+      value={{ favourite, addFavourite, removeFavourite }}
+    >
+      {children}
+    </FavouriteContext.Provider>
+  );
 };
 
 export default FavouriteProvider;
