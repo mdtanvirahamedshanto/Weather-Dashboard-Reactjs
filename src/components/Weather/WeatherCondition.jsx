@@ -1,4 +1,8 @@
+import { useContext } from "react";
+import { WeatherContext } from "../../contexts/WeatherContext";
+
 const WeatherCondition = () => {
+  const { weatherData } = useContext(WeatherContext);
   return (
     <div>
       <p className="text-sm lg:text-lg font-bold uppercase mb-8">
@@ -8,35 +12,35 @@ const WeatherCondition = () => {
         <li className="text-sm lg:text-lg flex items-center justify-between space-x-4">
           <span>Temp max</span>
           <div className="inline-flex space-x-4">
-            <p>19°</p>
+            <p>{weatherData.maxTemperature}</p>
             <img src="./assets/icons/temp-max.svg" alt="temp-max" />
           </div>
         </li>
         <li className="text-sm lg:text-lg flex items-center justify-between space-x-4">
           <span>Temp min</span>
           <div className="inline-flex space-x-4">
-            <p>19°</p>
+            <p>{weatherData.minTemperature}</p>
             <img src="./assets/icons/temp-min.svg" alt="temp-min" />
           </div>
         </li>
         <li className="text-sm lg:text-lg flex items-center justify-between space-x-4">
           <span>Humadity</span>
           <div className="inline-flex space-x-4">
-            <p>58%</p>
+            <p>{weatherData.humidity}%</p>
             <img src="./assets/icons/humidity.svg" alt="humidity" />
           </div>
         </li>
         <li className="text-sm lg:text-lg flex items-center justify-between space-x-4">
           <span>Cloudy</span>
           <div className="inline-flex space-x-4">
-            <p>86%</p>
+            <p>{weatherData.cloudPercentage}%</p>
             <img src="./assets/icons/cloud.svg" alt="cloudy" />
           </div>
         </li>
         <li className="text-sm lg:text-lg flex items-center justify-between space-x-4">
           <span>Wind</span>
           <div className="inline-flex space-x-4">
-            <p>5km/h</p>
+            <p>{weatherData.wind}km/h</p>
             <img src="./assets/icons/wind.svg" alt="wind" />
           </div>
         </li>
