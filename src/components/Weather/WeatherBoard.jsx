@@ -1,7 +1,8 @@
 /* eslint-disable no-unused-vars */
 
 import { useContext } from "react";
-import { WeatherContext } from "../../contexts";
+
+import { WeatherContext } from "../../contexts/WeatherContext";
 import AddFvtButton from "../Header/AddFvtButton";
 import WeatherCondition from "./WeatherCondition";
 import WeatherHeadline from "./WeatherHeadline";
@@ -9,6 +10,7 @@ import WeatherHeadline from "./WeatherHeadline";
 const WeatherBoard = () => {
   const { weatherData, loading } = useContext(WeatherContext);
 
+  console.log(weatherData);
   return (
     <main>
       <section className="">
