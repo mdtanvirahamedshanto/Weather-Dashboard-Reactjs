@@ -10,7 +10,7 @@ import WeatherHeadline from "./WeatherHeadline";
 const WeatherBoard = () => {
   const { weatherData, loading } = useContext(WeatherContext);
 
-  console.log(weatherData);
+  // console.log(weatherData);
   return (
     <main>
       <section className="">

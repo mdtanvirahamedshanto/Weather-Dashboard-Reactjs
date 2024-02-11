@@ -7,6 +7,7 @@ const AddFvtButton = () => {
   const [isFavourite, setIsFaourite] = useState(false);
   const { favourite, addFavourite, removeFavourite } =
     useContext(FavouriteContext);
+  console.log(favourite);
   const { weatherData } = useContext(WeatherContext);
   const { latitude, longitude, location } = weatherData;
   const foundFvt = favourite.find((fvt) => fvt.location === location);
