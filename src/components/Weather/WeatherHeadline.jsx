@@ -11,7 +11,6 @@ import ThunderIcon from "/assets/thunder.svg";
 
 const WeatherHeadline = () => {
   const { weatherData } = useContext(WeatherContext);
-  const { climate } = weatherData.climate;
   const getWeatherIcon = (climate) => {
     switch (climate) {
       case "Rain":
@@ -37,7 +36,10 @@ const WeatherHeadline = () => {
   return (
     <div>
       <div className="max-md:flex items-center justify-between md:-mt-10">
-        <img src={getWeatherIcon(climate)} alt={climate} />
+        <img
+          src={getWeatherIcon(weatherData.climate)}
+          alt={weatherData.climate}
+        />
         <div className="max-md:flex items-center max-md:space-x-4">
           <h1 className="text-[60px] lg:text-[80px] xl:text-[100px] leading-none md:mb-4">
             {Math.round(weatherData.temperature)}°
