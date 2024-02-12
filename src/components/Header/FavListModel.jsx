@@ -1,16 +1,10 @@
 import { useContext } from "react";
 import { FavouriteContext, LocationContext } from "../../contexts";
-import { getLocationByName } from "../../data/location-data";
 
 const FavListModel = () => {
   const { favourite } = useContext(FavouriteContext);
   const { setSelectedLocation } = useContext(LocationContext);
   console.log(favourite);
-
-  const handleClick = (location) => {
-    const fetchLocation = getLocationByName(location);
-    setSelectedLocation({ ...fetchLocation });
-  };
   return (
     <div className="max-w-xs py-4 bg-white rounded-md border-gray-500 absolute right-0 top-16 text-black shadow-lg ">
       <h3 className="text-lg font-bold px-4">Favourite Locations</h3>
@@ -20,7 +14,7 @@ const FavListModel = () => {
             <li key={fvt.location} className="hover:bg-gray-200">
               <a
                 onClick={() => {
-                  handleClick(fvt.location);
+                  setSelectedLocation({ ...fvt });
                 }}
               >
                 {fvt.location}
